@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce el menú, las especialidades y los horarios de Pizzería La Esquina.">
+    <title>La Esquina Pizzería | Pizza recién hecha</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="encabezado" id="inicio">
+        <div class="contenedor barra-navegacion">
+            <a class="marca" href="#inicio" aria-label="Pizzería La Esquina, ir al inicio">
+                <span class="marca-icono" aria-hidden="true">🍕</span>
+                <span>La Esquina<span class="marca-subtitulo">PIZZERÍA</span></span>
+            </a>
+
+            <nav aria-label="Menú principal">
+                <ul class="enlaces-navegacion">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="presentacion" aria-labelledby="titulo-principal">
+            <div class="contenedor presentacion-contenido">
+                <div>
+                    <p class="etiqueta">Hecha con pasión, servida con cariño</p>
+                    <h1 id="titulo-principal">Una buena pizza siempre reúne a todos.</h1>
+                    <p class="descripcion">En La Esquina Pizzería preparamos cada pizza con masa fresca, queso derretido y los ingredientes que más te gustan.</p>
+                    <a class="boton" href="#menu">Conoce nuestro menú <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="pizza-ilustracion" role="img" aria-label="Ilustración decorativa de una pizza recién horneada">
+                    <span aria-hidden="true">🍕</span>
+                    <span class="nota-ilustracion">¡Recién horneada!</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion menu-seccion" id="menu" aria-labelledby="titulo-menu">
+            <div class="contenedor">
+                <p class="etiqueta etiqueta-oscura">Para todos los gustos</p>
+                <h2 id="titulo-menu">Nuestro menú</h2>
+                <p class="introduccion-seccion">Escoge tu favorita entre nuestras principales opciones. Precios dependiendo de su tamaño.</p>
+
+                <div class="tarjetas-menu">
+                    <article class="tarjeta">
+                        <div class="tarjeta-icono" aria-hidden="true">🧀</div>
+                        <h3>Pizza de Queso</h3>
+                        <p>Salsa de tomate, mozzarella y nuestra masa fresca.</p>
+                        <p class="precio">Personal $8.99 Mediana $10.99 Large $15.99</p>
+                    </article>
+                    <article class="tarjeta">
+                        <div class="tarjeta-icono" aria-hidden="true">🍕</div>
+                        <h3>Pizza de Pepperoni</h3>
+                        <p>Mucho queso mozzarella y pepperoni en cada pedazo.</p>
+                        <p class="precio">Personal $9.99 Mediana $12.99 Large $19.99</p>
+                    </article>
+                    <article class="tarjeta">
+                        <div class="tarjeta-icono" aria-hidden="true">🍗</div>
+                        <h3>Pizza de pollo a la BBQ</h3>
+                        <p>Pollo sazonado, queso mozzarella y deliciosa salsa BBQ.</p>
+                        <p class="precio">Personal $12.99 Mediana $14.99 Large $25.99</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion nosotros-seccion" id="nosotros" aria-labelledby="titulo-nosotros">
+            <div class="contenedor nosotros-contenido">
+                <div>
+                    <p class="etiqueta etiqueta-oscura">Nuestra esencia</p>
+                    <h2 id="titulo-nosotros">Sabor que se comparte</h2>
+                    <p> En La Esquina pizzería, nuestra misión es sencilla: ofrecer pizzas deliciosas en un ambiente familiar, con ingredientes frescos y buen servicio.</p>
+                    <p>Ya sea para compartir con amistades o disfrutar de una noche de películas, siempre hay una buena razón para pedir una pizza.</p>
+                </div>
+                <div class="dato-destacado">
+                    <span aria-hidden="true">♥</span>
+                    <strong>Preparadas con cariño</strong>
+                    <p>Una buena pizza empieza con una buena receta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion contacto-seccion" id="contacto" aria-labelledby="titulo-contacto">
+            <div class="contenedor">
+                <p class="etiqueta">¿Se te antojó una pizza?</p>
+                <h2 id="titulo-contacto">Visítanos pronto</h2>
+                               <div class="horarios">
+                    <h3>Nuestro horario de servicio a la familia</h3>
+                    <p>Lunes a jueves: 11:00 a. m. – 10:00 p. m.</p>
+                    <p>Viernes a domingo: 11:00 a. m. – 11:30 p. m.</p>
+</p>(Se aceptarán pedidos hasta treinta minutos antes de cerrar.)</p>
+                </div>
+                <a class="boton boton-claro" href="#inicio">Volver al inicio ↑</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>© 2026 La Esquina Pizzería.</p>
+        </div>
+    </footer>
+</body>
+</html>
