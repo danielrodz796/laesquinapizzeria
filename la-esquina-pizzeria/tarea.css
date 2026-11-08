@@ -1,0 +1,15 @@
+/* Estilos extra solo para tarea-html5.html (se suman a estilos.css) */
+main { padding: 40px 0; }
+section { margin-bottom: 40px; }
+.tarjeta { margin-bottom: 16px; }
+.nota-lateral {
+    padding: 14px 18px;
+    border-left: 5px solid var(--rojo);
+    background: var(--crema-profundo);
+    border-radius: 8px;
+}
+figure { margin: 24px 0; }
+figcaption { margin-top: 8px; font-size: 14px; color: var(--texto-suave); }
+video, canvas { max-width: 100%; border-radius: 12px; background: #241b19; }
+canvas { background: var(--crema-profundo); }
+code { background: var(--crema-profundo); padding: 2px 6px; border-radius: 4px; }

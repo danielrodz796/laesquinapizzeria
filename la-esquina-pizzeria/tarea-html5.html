@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- ======================================================================
+     1. SINTAXIS DE HTML
+     - <!DOCTYPE html> le dice al navegador que usamos HTML5.
+     - Una etiqueta tiene apertura <p> y cierre </p>; lo escrito entre ambas es el contenido.
+     - Un atributo va dentro de la etiqueta de apertura: nombre="valor" (ej. lang="es").
+     ====================================================================== -->
+<html lang="es"> <!-- <html>: raíz del documento; lang="es" indica el idioma -->
+<head>
+    <!-- <head>: información sobre la página (no se muestra en pantalla) -->
+    <meta charset="UTF-8"> <!-- atributo charset: permite tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea HTML5 | La Esquina Pizzería</title>
+    <link rel="stylesheet" href="estilos.css">       <!-- estilos de la página principal -->
+    <link rel="stylesheet" href="tarea.css">         <!-- estilos extra solo de esta tarea -->
+</head>
+
+<body> <!-- <body>: todo lo que el visitante ve -->
+
+    <!-- ==================================================================
+         2. SEMÁNTICA DE HTML
+         Las etiquetas semánticas describen el SIGNIFICADO del contenido.
+         Ventaja frente a usar solo <div>: los buscadores, los lectores de
+         pantalla y otros programadores entienden la estructura sin adivinar.
+         ================================================================== -->
+
+    <!-- <header>: encabezado de la página (logo y título) -->
+    <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+            <!-- Enlace: <a> con atributo href (destino) -->
+            <a class="marca" href="index.html">🍕 La Esquina</a>
+
+            <!-- <nav>: bloque de enlaces de navegación principal -->
+            <nav aria-label="Menú principal">
+                <!-- Lista NO ordenada: <ul> con elementos <li> -->
+                <ul class="enlaces-navegacion">
+                    <li><a href="#sintaxis">Sintaxis</a></li>
+                    <li><a href="#semantica">Semántica</a></li>
+                    <li><a href="#html5">HTML5</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- <main>: contenido principal único de la página -->
+    <main class="contenedor">
+
+        <!-- Encabezado de nivel 1 (solo uno por página) y párrafo -->
+        <h1>Estructura básica de una página web</h1>
+        <p>Esta página practica la sintaxis, la semántica y las novedades de HTML5 usando como ejemplo a La Esquina Pizzería.</p>
+
+        <!-- <section>: agrupa contenido de un mismo tema, normalmente con su encabezado -->
+        <section id="sintaxis">
+            <h2>1. Sintaxis: encabezados, párrafos, listas y enlaces</h2>
+            <p>Un párrafo se escribe con <code>&lt;p&gt;</code> y un enlace con <code>&lt;a href="..."&gt;</code>.</p>
+
+            <h3>Pasos para pedir una pizza</h3>
+            <!-- Lista ORDENADA: <ol> numera automáticamente sus <li> -->
+            <ol>
+                <li>Escoge el tamaño.</li>
+                <li>Elige tu pizza favorita.</li>
+                <li>Haz tu pedido antes de que cierre.</li>
+            </ol>
+
+            <h3>Tamaños disponibles</h3>
+            <ul>
+                <li>Personal</li>
+                <li>Mediana</li>
+                <li>Large</li>
+            </ul>
+
+            <!-- Atributos de enlace: href (destino), target (dónde abrir), rel (seguridad) -->
+            <p><a href="https://www.w3.org/TR/html52/" target="_blank" rel="noopener">Ver la especificación de HTML</a></p>
+        </section>
+
+        <section id="semantica">
+            <h2>2. Semántica: article, section, aside</h2>
+
+            <!-- <article>: contenido completo que tendría sentido por sí solo (ej. una entrada de blog) -->
+            <article class="tarjeta">
+                <h3>Pizza de Queso</h3>
+                <p>Salsa de tomate, mozzarella y nuestra masa fresca.</p>
+            </article>
+
+            <article class="tarjeta">
+                <h3>Pizza de Pepperoni</h3>
+                <p>Mucho queso mozzarella y pepperoni en cada pedazo.</p>
+            </article>
+
+            <!-- <aside>: contenido relacionado pero secundario (notas, datos curiosos) -->
+            <aside class="nota-lateral">
+                <p><strong>Dato:</strong> un &lt;div&gt; no dice nada sobre su contenido; &lt;article&gt; y &lt;aside&gt; sí.</p>
+            </aside>
+        </section>
+
+        <section id="html5">
+            <h2>3. HTML5: video, audio, canvas, figure y figcaption</h2>
+
+            <!-- <figure> + <figcaption>: imagen/video/diagrama con su descripción asociada -->
+            <figure>
+                <!-- <video>: reproduce video sin plugins (antes se necesitaba Flash).
+                     controls = botones de reproducir; <source> permite varios formatos.
+                     El texto interno se muestra si el navegador no lo soporta. -->
+                <video controls width="480" preload="metadata">
+                    <source src="media/pizza.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+                <figcaption>Así preparamos nuestra masa (agrega tu archivo en media/pizza.mp4).</figcaption>
+            </figure>
+
+            <figure>
+                <!-- <audio>: reproduce sonido de forma nativa -->
+                <audio controls>
+                    <source src="media/ambiente.mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio HTML5.
+                </audio>
+                <figcaption>Música ambiental del local (agrega tu archivo en media/ambiente.mp3).</figcaption>
+            </figure>
+
+            <figure>
+                <!-- <canvas>: lienzo para dibujar con JavaScript (gráficos, juegos) -->
+                <canvas id="lienzo-pizza" width="240" height="240" aria-label="Dibujo de una pizza hecho con canvas" role="img">
+                    Tu navegador no soporta canvas.
+                </canvas>
+                <figcaption>Pizza dibujada con &lt;canvas&gt; y JavaScript.</figcaption>
+            </figure>
+
+            <!-- Comparación: ventajas de la estructura HTML5 -->
+            <h3>Ventajas de HTML5 frente a la estructura anterior</h3>
+            <ul>
+                <li><strong>Más claro:</strong> &lt;header&gt;, &lt;nav&gt; y &lt;footer&gt; reemplazan a decenas de &lt;div id="..."&gt;.</li>
+                <li><strong>Accesible:</strong> los lectores de pantalla saltan directo a &lt;main&gt; o &lt;nav&gt;.</li>
+                <li><strong>Mejor posicionamiento (SEO):</strong> los buscadores entienden qué es cada parte.</li>
+                <li><strong>Multimedia nativa:</strong> &lt;video&gt; y &lt;audio&gt; no requieren plugins externos.</li>
+                <li><strong>Gráficos:</strong> &lt;canvas&gt; permite dibujar y animar sin imágenes externas.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- <footer>: pie de página (derechos, contacto) -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>© 2026 La Esquina Pizzería.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript del canvas: se obtiene el "contexto 2D" y se dibuja -->
+    <script>
+        const lienzo = document.getElementById("lienzo-pizza");
+        const ctx = lienzo.getContext("2d");
+
+        function circulo(x, y, radio, color) {
+            ctx.beginPath();
+            ctx.arc(x, y, radio, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+
+        circulo(120, 120, 110, "#e0a458");  // masa
+        circulo(120, 120, 95, "#bd3328");   // salsa
+        circulo(120, 120, 85, "#ffd48b");   // queso
+
+        // Pepperonis en posiciones fijas
+        [[80, 90], [150, 80], [110, 140], [165, 145], [75, 150]].forEach(function (p) {
+            circulo(p[0], p[1], 14, "#8d251f");
+        });
+    </script>
+</body>
+</html>
